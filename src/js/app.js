@@ -1,3 +1,5 @@
+const adoption = artifacts.require("adoption");
+
 App = {
   web3Provider: null,
   contracts: {},
