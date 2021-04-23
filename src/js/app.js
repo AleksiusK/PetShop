@@ -1,6 +1,6 @@
 App = {
   web3Provider: null,
-  contracts: {adoption},
+  contracts: {},
 
   init: async function() {
     // Load pets.
@@ -49,7 +49,7 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('./adoption.json', function(data) {
+    $.getJSON('../adoption.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract
       var adoptionArtifact = data;
       App.contracts.adoption = TruffleContract(adoptionArtifact);
