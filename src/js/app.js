@@ -44,12 +44,12 @@ App = {
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
     }
     web3 = new Web3(App.web3Provider);
-    App.web3Provider.enable();
+    App.web3Provider.eth_requestAccounts;
     return App.initContract();
   },
 
   initContract: function() {
-    $.getJSON('../adoption.json', function(data) {
+    $.getJSON('adoption.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract
       var adoptionArtifact = data;
       App.contracts.adoption = TruffleContract(adoptionArtifact);

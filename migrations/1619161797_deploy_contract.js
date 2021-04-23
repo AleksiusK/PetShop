@@ -1,6 +1,6 @@
-var Adoption = artifacts.require("adoption");
+var adoption = artifacts.require("adoption");
 
-module.exports = function(_deployer) {
+module.exports = function(deployer) {
   // Use deployer to state migration tasks.
-  _deployer.deploy(Adoption);
+  deployer.deploy(adoption);
 };
