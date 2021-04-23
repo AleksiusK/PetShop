@@ -1,6 +1,6 @@
 App = {
   web3Provider: null,
-  contracts: {},
+  contracts: {adoption},
 
   init: async function() {
     // Load pets.
