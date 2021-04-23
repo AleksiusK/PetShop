@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "truffle.js",
+  "engines": {
+    "node": "14.15.1"
+  },
   "directories": {
     "test": "test"
   },
