@@ -1,3 +1,4 @@
+
 App = {
   web3Provider: null,
   contracts: {},
@@ -29,7 +30,7 @@ App = {
       App.web3Provider = window.ethereum;
       try {
         // Request account access
-        await window.ethereum.enable();
+        await App.web3Provider.enable();
       } catch (error) {
         // User denied account access...
         console.error("User denied account access")
@@ -44,12 +45,11 @@ App = {
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
     }
     web3 = new Web3(App.web3Provider);
-    App.web3Provider.eth_requestAccounts;
     return App.initContract();
   },
 
   initContract: function() {
-    $.getJSON('adoption.json', function(data) {
+    $.getJSON('../contracts/adoption.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract
       var adoptionArtifact = data;
       App.contracts.adoption = TruffleContract(adoptionArtifact);
